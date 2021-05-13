@@ -1,0 +1,78 @@
+[
+{
+	"uri": "/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": "AMAZON SAGEMAKER NOTEBOOK HANDS ON LAB  Amazon SageMaker 소개 Amazon SageMaker는 End-to-End 머신러닝 서비스로, ML을 위해 특별히 구축된 다양한 기능 세트를 함께 활용하여 고품질 기계 학습(ML) 모델을 빠르게 준비, 구축, 훈련 및 배포합니다. Amazon SageMaker는 모든 개발자 및 데이터 사이언티스트가 기계 학습 프로세스의 각 단계에서 부담스러운 작업을 제거하여 고품질의 모델을 보다 쉽게 개발할 수 있도록 합니다. SageMaker는 기계 학습에 사용되는 모든 구성 요소를 단일 도구 세트로 제공하므로, 훨씬 적은 작업과 저렴한 비용으로 모델을 프로덕션으로 더욱 빠르게 이전할 수 있습니다.  실습 개요 및 순서 본 실습은 SageMaker 사용법을 익히는데 도움이 되는 모듈들로 구성되어 있습니다.\n아래와 같이 실습이 진행되며 약 1시간 정도 소요됩니다.\n 사전 준비사항 SageMaker Notebook 실습 리소스 정리  모든 실습은 서로 유기적으로 연결되어 있습니다. 따라서 실습은 차례대로 진행해야 합니다.\n  © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/prerequisite/",
+	"title": "사전 준비사항",
+	"tags": [],
+	"description": "",
+	"content": "데이터셋 다운로드 매년 수십억 건의 은행 거리가 발생하고, 사기인 경우는 거의 없지만 거래를 제대로 탐지하지 않으면 그 피해가 엄청납니다. 피해 비용은 고객과 기업, 그리고 거래를 검증해야하는 금융 규제 당국에게도 막대합니다.\n본 실습에서는 은행 사기 감지 데이터셋을 처리하여 사기 거래를 자동으로 감지하는 ML 모델을 만듭니다. 이 데이터셋은 아프리카 국가에서 구현한 모바일 거래 시뮬레이션으로 한달 간의 거래 로그에서 추출한 실제 거래 샘플을 기반으로 합니다. 데이터는 kaggle에서 다운로드 할 수 있습니다.\n여기에서는 실습을 보다 쉽게 수행하도록 데이터셋을 가공했습니다. 다음 CSV 파일을 다운로드하면 됩니다.\n  Attachments   banking_fraud.csv  (193 ko)     Header 설명  type - 거래 유형 (CASH-IN, CASH-OUT, DEBIT, PAYMENT, TRANSFER) amount - 거래 금액 nameOrig - 거래를 시작한 주체 oldbalanceOrg - 거래 시작 주체의 거래 이전 잔고 newbalanceOrig - 거래 시작 주체의 거래 이후 잔고 nameDest - 거래 대상 주체 oldbalanceDest - 거래 대상의 거래 이전 잔고 newbalanceDest - 거래 대상의 거래 이후 잔고 isFraud - 사기 여부   © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/prerequisite/s3/",
+	"title": "Amazon S3 bucket 생성하기",
+	"tags": [],
+	"description": "",
+	"content": "SageMaker는 Amazon S3에 데이터 및 모델 저장합니다. 이를 위해 S3 bucket을 만들고 Asia Pacific (Seoul) ap-northeast-2 리전을 사용합니다.\nAWS Management Console에서 Amazon S3를 검색합니다.  S3 bucket 생성하기   Bucket 목록에서 Create bucket 버튼을 선택합니다.   Bucket name과 AWS Region을 다음과 같이 입력합니다. 그 다음 하단에 있는 Create bucket 버튼을 클릭합니다.\n   Bucket name: sagemaker-[acountId] (자신의 Account ID로 변경) AWS Region: Asia Pacific (Seoul) ap-northeast-2   S3 Bucket 이름은 모든 계정을 통틀어서 고유해야합니다.\n  S3로 파일 업로드   생성한 bucket 으로 이동한 후, banking_fraud.csv file을 업로드 합니다. 파일을 drag and drop 할 수도 있습니다.   File이 업로드 된 것을 확인합니다.    © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/prerequisite/instance/",
+	"title": "SageMaker Notebook Instance 생성하기",
+	"tags": [],
+	"description": "",
+	"content": "AWS Management Console에서 Amazon SageMaker를 검색합니다.  Region 선택하기 Amazon SageMaker Notebook Instance와 S3 buckect이 동일한 리전에 있도록 생성합니다.\n 본 실습에서는 Asia Pacific (Seoul) ap-northeast-2 region을 선택합니다. 그 후, 좌측 패널에서 Notebook \u0026gt; Notebook instances 탭을 클릭합니다.  SageMaker Notebook Instance 생성하기   우측 상단의 Create notebook instance 버튼을 클릭합니다.   Notebook instance 이름을 sagemaker-notebook-workshop으로 작성합니다.   Permissions and encryption 에 있는 IAM role에서는 Create a new role 을 선택합니다.   모두 기본 설정으로 두고, Create role 버튼을 클릭합니다.   IAM role이 생성된 것을 확인하고 Create notebook instance 버튼을 클릭합니다.   Instance의 Status가 InService로 바뀔때까지 기다립니다. 대략 3-5 분이 소요됩니다.   Open Jupyter 버튼을 클릭합니다.   Notebook instance의 Jupyter 홈페이지로 이동합니다.    © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/notebook/",
+	"title": "SageMaker Notebook",
+	"tags": [],
+	"description": "",
+	"content": "본 실습에서는 Jupyter notebook을 실행해 SageMaker에서 어떻게 훈련하고 배포하는지 배웁니다.\n Jupyter notebook 다운로드   우측 상단의 New 버튼을 클릭하고 conda_tensorflow2_p36 커널을 선택해 notebook을 띄웁니다.   다음 명령어를 복사하여 셀에서 실행합니다. 셀을 실행하기 위해서는 상단의 Run 버튼을 클릭하거나 Shift+Enter 키를 누릅니다.\n  !git clone https://github.com/jjk-dev/sagemaker-notebook-banking-fraud.git\rHome으로 돌아가면 sagemaker-notebook-examples 폴더가 생성된 것을 볼 수 있습니다.\n   © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/cleanup/",
+	"title": "실습 리소스 정리",
+	"tags": [],
+	"description": "",
+	"content": " Important: 본 실습을 마치면 사용한 AWS 계정에 비용이 추가로 발생하지 않도록 사용한 리소스를 삭제해야 합니다.\n  Instances 중지 실행중인 instance의 라디오 버튼을 클릭한 후, Actions 버튼을 누릅니다. 드롭다운 메뉴에 있는 Stop을 클릭해 instance를 중지합니다.\n Endpoint 삭제 생성한 Endpoint가 남아있지는 않는지 확인합니다. Endpoint가 남아있다면 삭제합니다. 좌측 패널의 Inference \u0026gt; Endpoints 탭을 클릭한 후, InService 상태의 endpoint를 클릭합니다. 그 다음 Action 버튼을 누르고 Delete를 선택합니다.\n© 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/notebook/xgboost/",
+	"title": "Built-in 알고리즘 사용하기",
+	"tags": [],
+	"description": "",
+	"content": "본 실습에서는 Built-in 알고리즘은 XGBoost를 이용해 은행 사기 탐지 모델을 train, tune 그리고 deploy를 합니다.\n S3 bucket 이름 복사 banking_fraud.csv 파일을 업로드 한 S3 bucket 이름을 복사합니다.  Jupyter notebook 실행하기   sagemaker-notebook-examples 폴더 \u0026gt; 1. Banking-fraud-with-XGBoost.ipynb을 클릭합니다.   4번째 셀에 앞서 복사한 S3 bucket 이름 과 학번을 입력합니다.\n   예시: student_number = \u0026lsquo;2021000000\u0026rsquo; bucket = \u0026lsquo;sagemaker-000000000000\u0026rsquo;   Jupyter notebook에서 Shift+Enter로 모든 셀을 실행합니다. Endpoint을 생성하는 Hosting 부분은 8-10 분 정도 소요됩니다.   Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.   마지막 셀의 주석처리를 제거하여 Endpoint를 삭제합니다.   Important: Hosting을 수행하셨다면, Endpoint를 꼭 삭제해 추가적인 과금이 발생하지 않도록 합니다.\n  © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/notebook/pre-trained/",
+	"title": "Pre-trained 모델 사용하기",
+	"tags": [],
+	"description": "",
+	"content": "본 실습에서는 pre-trained한 mobilenet으로 이미지 분류 모델을 불러옵니다.\n S3 bucket 이름 복사 앞서 생성한 S3 bucket 이름을 복사합니다.  Jupyter notebook 실행하기   sagemaker-notebook-examples 폴더 \u0026gt; 2. Image-classification-with-pre-trained-model.ipynb을 클릭합니다.   3번째 셀에 앞서 복사한 S3 bucket 이름과 학번을 입력합니다.   Jupyter notebook에서 Shift+Enter로 모든 셀을 실행하고, 모델이 import 된 것을 확인합니다.   본 실습에서는 hosting과 추론을 하지 않습니다. 만약 진행했다면 필히 마지막 셀의 주석처리를 제거하여 Endpoint를 삭제합니다.   Important: Hosting을 수행하셨다면, Endpoint를 꼭 삭제해 추가적인 과금이 발생하지 않도록 합니다.\n  © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.\n"
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/credits/",
+	"title": "크레딧",
+	"tags": [],
+	"description": "",
+	"content": "패키지와 라이브러리  mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services\u0026hellip; horsey - Progressive and customizable autocomplete component clipboard.js - copy text to clipboard highlight.js - Javascript syntax highlighter modernizr - A JavaScript toolkit that allows web developers to use new CSS3 and HTML5 features while maintaining a fine level of control over browsers that don\u0026rsquo;t support  도구  Netlify - Continuous deployement and hosting of this documentation Hugo  "
+}]
