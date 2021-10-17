@@ -5,7 +5,7 @@ pre: "<b>1-2. </b>"
 ---
 
 AWS Management Console에서 [Amazon SageMaker](https://ap-northeast-2.console.aws.amazon.com/sagemaker/home?region=ap-northeast-2#/)를 검색합니다.
-![snapshot](./images/sagemaker.png)
+![image](/images/10_prerequisite/20_instance/sagemaker.png)
 
 ---
 
@@ -16,36 +16,36 @@ Amazon SageMaker Notebook Instance와 S3 buckect이 동일한 리전에 있도�
 {{% /notice %}}
 
 본 실습에서는 **Asia Pacific (Seoul) ap-northeast-2** region을 선택합니다. 그 후, 좌측 패널에서 **Notebook > Notebook instances** 탭을 클릭합니다.
-![snapshot](./images/select-region.png)
+![image](/images/10_prerequisite/20_instance/select-region.png)
 
 ---
 
 ## SageMaker Notebook Instance 생성하기
 
 1. 우측 상단의 **Create notebook instance** 버튼을 클릭합니다.
-![snapshot](./images/create-instance.png)
+![image](/images/10_prerequisite/20_instance/create-instance.png)
 
 2. Notebook instance 이름을 `sagemaker-notebook-workshop`으로 작성합니다.
-![snapshot](./images/name.png)
+![image](/images/10_prerequisite/20_instance/name.png)
 
 3. Permissions and encryption 에 있는 **IAM role**에서는 **Create a new role** 을 선택합니다.
-![snapshot](./images/create-role.png)
+![image](/images/10_prerequisite/20_instance/create-role.png)
 
 4. 모두 기본 설정으로 두고, **Create role** 버튼을 클릭합니다.
-![snapshot](./images/role-s3.png)
+![image](/images/10_prerequisite/20_instance/role-s3.png)
 
 5. IAM role이 생성된 것을 확인하고 **Create notebook instance** 버튼을 클릭합니다.
-![snapshot](./images/submit.png)
+![image](/images/10_prerequisite/20_instance/submit.png)
 
 6. Instance의 **Status**가 **InService**로 바뀔때까지 기다립니다. 대략 3-5 분이 소요됩니다.
-![snapshot](./images/status1.png)
-![snapshot](./images/status2.png)
+![image](/images/10_prerequisite/20_instance/status1.png)
+![image](/images/10_prerequisite/20_instance/status2.png)
 
 7. **Open Jupyter** 버튼을 클릭합니다.
-![snapshot](./images/start-notebook.png)
+![image](/images/10_prerequisite/20_instance/start-notebook.png)
 
 8. Notebook instance의 Jupyter 홈페이지로 이동합니다.                        
-![snapshot](./images/notebook-main.png)
+![image](/images/10_prerequisite/20_instance/notebook-main.png)
 ---
 
 © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.

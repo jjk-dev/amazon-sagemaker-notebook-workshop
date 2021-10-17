@@ -7,20 +7,20 @@ pre: "<b>1-1. </b>"
 SageMaker는 Amazon S3에 데이터 및 모델 저장합니다. 이를 위해 S3 bucket을 만들고 **Asia Pacific (Seoul) ap-northeast-2** 리전을 사용합니다.
 
 AWS Management Console에서 [Amazon S3](https://s3.console.aws.amazon.com/s3/home)를 검색합니다.
-![s3](./images/s3.png)
+![image](/images/10_prerequisite/10_s3/s3.png)
 
 ---
 
 ## S3 bucket 생성하기
 
 1. Bucket 목록에서 **Create bucket** 버튼을 선택합니다.
-![snapshoot](./images/create-bucket.png)
+![image](/images/10_prerequisite/10_s3/create-bucket.png)
 
 2. **Bucket name**과 **AWS Region**을 다음과 같이 입력합니다. 그 다음 하단에 있는 **Create bucket** 버튼을 클릭합니다.  
  
 - Bucket name: `sagemaker-[acountId]` (자신의 Account ID로 변경)
 - AWS Region: `Asia Pacific (Seoul) ap-northeast-2`
-![snapshoot](./images/set-config.png)
+![image](/images/10_prerequisite/10_s3/set-config.png)
 
 {{% notice info %}}
 S3 Bucket 이름은 모든 계정을 통틀어서 고유해야합니다.
@@ -30,10 +30,10 @@ S3 Bucket 이름은 모든 계정을 통틀어서 고유해야합니다.
 ## S3로 파일 업로드
 
 1. 생성한 bucket 으로 이동한 후, **banking_fraud.csv** file을 업로드 합니다. 파일을 drag and drop 할 수도 있습니다.
-![snapshoot](./images/upload.png)
+![image](/images/10_prerequisite/10_s3/upload.png)
 
 2. File이 업로드 된 것을 확인합니다.
-![snapshoot](./images/result.png)
+![image](/images/10_prerequisite/10_s3/result.png)
 
 ---
 

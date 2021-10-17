@@ -13,14 +13,15 @@ pre: "<b>3. </b>"
 ## Instances 중지
 실행중인 instance의 라디오 버튼을 클릭한 후, **Actions 버튼**을 누릅니다. 드롭다운 메뉴에 있는 **Stop**을 클릭해 instance를 중지합니다.
 
-![snapshot](./images/stop.png)
+![image](/images/99_cleanup/stop.png)
 
 ---
 
 ## Endpoint 삭제
 생성한 Endpoint가 남아있지는 않는지 확인합니다. Endpoint가 남아있다면 삭제합니다. 좌측 패널의 **Inference > Endpoints** 탭을 클릭한 후, **InService** 상태의 endpoint를 클릭합니다. 그 다음 **Action 버튼**을 누르고 **Delete**를 선택합니다. 
 
-![snapshot](./images/remove-endpoint.png)
+![image](/images/99_cleanup/remove-endpoint.png)
 
+---
 © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 

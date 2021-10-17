@@ -18,7 +18,7 @@ pre: "<b>1. </b>"
 
 ## Header 설명
 
-![data-preview](./images/data-preview.png)
+![image](/images/10_prerequisite/data-preview.png)
 
 - type - 거래 유형 (CASH-IN, CASH-OUT, DEBIT, PAYMENT, TRANSFER)
 - amount - 거래 금액
