@@ -1,0 +1,59 @@
+# baseURL 변경
+baseURL = "/"
+languageCode = "ko-KR"
+defaultContentLanguage = "ko"
+
+# title 변경
+title = "Amazon SageMaker Notebook Hands-on Lab"
+theme = "hugo-theme-learn"
+themesdir = "."
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+# description, author 변경
+[params]
+  description = "Amazon SageMaker Notebook Hands-on Lab"
+  author = "Jiyeon Kang"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  themeVariant = "aws"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.ko]
+title = "Amazon SageMaker Notebook Hands-on Lab"
+weight = 1
+languageName = "한국어"
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Resources"
+identifier = "sagemaker_doc"
+url = "https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html"
+weight = 10
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-aws'></i> AWS Homepage"
+identifier = "aws"
+url = "https://aws.amazon.com/"
+weight = 12
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-blog'></i> AWS Korea Blog"
+identifier = "blog"
+url = "https://aws.amazon.com/ko/blogs/korea/"
+weight = 14
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-facebook-square'></i> Facebook"
+identifier = "facebook"
+url = "https://www.facebook.com/groups/awskrug/"
+weight = 16
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub Repo"
+identifier = "ds"
+url = "https://github.com/jjk-dev/"
+weight = 18
