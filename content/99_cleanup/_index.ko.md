@@ -1,6 +1,6 @@
 ---
 title: 실습 리소스 정리
-weight: 40
+weight: 99
 pre: "<b>3. </b>"
 ---
 
@@ -18,10 +18,11 @@ pre: "<b>3. </b>"
 ---
 
 ## Endpoint 삭제
-생성한 Endpoint가 남아있지는 않는지 확인합니다. Endpoint가 남아있다면 삭제합니다. 좌측 패널의 **Inference > Endpoints** 탭을 클릭한 후, **InService** 상태의 endpoint를 클릭합니다. 그 다음 **Action 버튼**을 누르고 **Delete**를 선택합니다. 
+생성한 Endpoint가 남아있지않는지 확인합니다. Endpoint가 남아있다면 삭제합니다.
+좌측 패널의 **Inference > Endpoints** 탭을 클릭한 후, **InService** 상태의 endpoint를 클릭합니다.
+그 다음 **Action 버튼**을 누르고 **Delete**를 선택합니다. 
 
 ![image](/images/99_cleanup/remove-endpoint.png)
 
 ---
 © 2021 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
-

@@ -1,6 +1,6 @@
 ---
 title: SageMaker Notebook Instance 생성하기
-weight: 24
+weight: 12
 pre: "<b>1-2. </b>"
 ---
 
@@ -25,7 +25,7 @@ Amazon SageMaker Notebook Instance와 S3 buckect이 동일한 리전에 있도�
 1. 우측 상단의 **Create notebook instance** 버튼을 클릭합니다.
 ![image](/images/10_prerequisite/20_instance/create-instance.png)
 
-2. Notebook instance 이름을 `sagemaker-notebook-workshop`으로 작성합니다.
+2. Notebook instance 이름을 `sagemaker-workshop`으로 작성합니다.
 ![image](/images/10_prerequisite/20_instance/name.png)
 
 3. Permissions and encryption 에 있는 **IAM role**에서는 **Create a new role** 을 선택합니다.

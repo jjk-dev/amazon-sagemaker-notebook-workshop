@@ -1,6 +1,6 @@
 ---
 title: 사전 준비사항
-weight: 20
+weight: 10
 pre: "<b>1. </b>"
 ---
 
