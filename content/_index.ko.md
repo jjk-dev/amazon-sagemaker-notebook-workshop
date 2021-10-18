@@ -4,9 +4,7 @@ title: Home
 weight: 5
 chapter: true
 ---
-
 # AMAZON SAGEMAKER NOTEBOOK WORKSHOP
-
 ---
 
 ## Amazon SageMaker 소개

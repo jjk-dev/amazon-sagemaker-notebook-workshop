@@ -13,7 +13,7 @@ pre: "<b>2-1. </b>"
 1. **sagemaker-notebook-examples-kr 폴더** > **1. Banking-fraud-with-XGBoost.ipynb**을 클릭합니다.
 ![image](/images/20_notebook/10_xgboost/xgb-notebook.png)
 
-2. **S3 bucket 이름**을 `sagemaker-workshop`으로 입력합니다. 
+2. **S3 bucket 이름**을 S3를 생성할 때 사용하셨던 `sagemaker-workshop-성함`으로 변경합니다. 
 ![image](/images/20_notebook/10_xgboost/replace.png)
 
 3. Jupyter notebook에서 **Shift+Enter**로 모든 셀을 실행합니다. Endpoint을 생성하는 Hosting 부분은 5-10 분 정도 소요됩니다. 
