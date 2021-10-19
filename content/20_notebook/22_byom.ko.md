@@ -10,7 +10,7 @@ pre: "<b>2-2. </b>"
 
 ## Jupyter notebook 실행하기
 
-1. **sagemaker-notebook-examples-kr 폴더** > **2. Image-classification-with-pre-trained-model.ipynb**을 클릭합니다.
+1. **sagemaker-notebook-examples-kr 폴더** > **2. Image-classification-with-byom.ipynb**을 클릭합니다.
 ![image](/images/20_notebook/20_pre-trained/pt-notebook.png)
 
 2. **S3 bucket 이름**을 S3를 생성할 때 사용하셨던 `sagemaker-workshop-성함`으로 변경합니다.
@@ -20,6 +20,7 @@ pre: "<b>2-2. </b>"
 ![image](/images/20_notebook/20_pre-trained/result.png)
 
 4. Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.
+![image](/images/20_notebook/20_pre-trained/hosting.png)
 
 5. 마지막 셀의 주석처리를 제거하여 **Endpoint를 삭제**합니다.
 ![image](/images/20_notebook/20_pre-trained/delete-endpoint.png)
