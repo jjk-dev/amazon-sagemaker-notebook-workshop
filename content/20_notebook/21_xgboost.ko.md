@@ -13,16 +13,18 @@ pre: "<b>2-1. </b>"
 1. **sagemaker-notebook-examples-kr 폴더** > **1. Banking-fraud-with-XGBoost.ipynb**을 클릭합니다.
 ![image](/images/20_notebook/10_xgboost/xgb-notebook.png)
 
-2. **S3 bucket 이름**을 S3를 생성할 때 사용하셨던 `sagemaker-workshop-성함`으로 변경합니다. 그 후, Jupyter notebook에서 **Shift+Enter**로 모든 셀을 실행하셔서 feature engineering, training, deploy를 진행합니다. Notebook의 각 셀의 설명을 참고해주세요. 
+2. **S3 bucket 이름**을 S3를 생성할 때 사용하셨던 `sagemaker-workshop-성함`으로 변경합니다. 
 ![image](/images/20_notebook/10_xgboost/replace.png)
 
-3. Training job 생성 및 Endpoint을 생성하는 Hosting 부분은 5-10 분 정도 소요됩니다. 
+3. 그 후, Jupyter notebook에서 **Shift+Enter**로 모든 셀을 실행하셔서 feature engineering, training, deploy를 진행합니다. Notebook의 각 셀의 설명을 참고해주세요. 
+
+4. Training job 생성 및 Endpoint을 생성하는 Hosting 부분은 5-10 분 정도 소요됩니다. 
 ![image](/images/20_notebook/10_xgboost/hosting.png)
 
-4. Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.
+5. Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.
 ![image](/images/20_notebook/10_xgboost/result.png)
 
-5. 마지막 셀의 주석처리를 제거하여 **Endpoint를 삭제**합니다.
+6. 마지막 셀의 주석처리를 제거하여 **Endpoint를 삭제**합니다.
 ![image](/images/20_notebook/10_xgboost/delete-endpoint.png)
  
 {{% notice warning %}}
