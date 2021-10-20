@@ -1,5 +1,5 @@
 ---
-title: 실습 리소스 정리
+title: 리소스 정리
 weight: 99
 pre: "<b>3. </b>"
 ---
@@ -10,8 +10,8 @@ pre: "<b>3. </b>"
 
 ---
 
-## Instances 중지
-실행중인 instance의 라디오 버튼을 클릭한 후, **Actions 버튼**을 누릅니다. 드롭다운 메뉴에 있는 **Stop**을 클릭해 instance를 중지합니다.
+## Instances 정지
+실행중인 instance의 라디오 버튼을 클릭한 후, **Actions 버튼**을 누릅니다. 드롭다운 메뉴에 있는 **Stop**을 클릭해 instance를 정지합니다.
 
 ![image](/images/99_cleanup/stop.png)
 
