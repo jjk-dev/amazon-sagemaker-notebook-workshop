@@ -19,7 +19,7 @@ pre: "<b>1-1. </b>"
 ![image](/images/10_prerequisite/0_event_engine/sign-in.png)
 
 5. 다음 화면에서 **AWS Console** 버튼을 클릭하면 콘솔에 로그인할 수 있는 링크를 받을 수 있습니다.
-![image](/images/10_prerequisite/0_event_engine/team-dashboard.png)
+![image](/images/10_prerequisite/0_event_engine/team-board.png)
 
 6. **Open AWS Console** 버튼을 클릭하면 AWS Console 창으로 접속할 수 있습니다. 또한, CLI 환경을 위한 Access Key와 Secret Access Key도 확인할 수 있습니다.
 ![image](/images/10_prerequisite/0_event_engine/open-console.png)
