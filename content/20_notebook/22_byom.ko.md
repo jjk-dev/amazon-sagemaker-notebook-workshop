@@ -4,7 +4,7 @@ weight: 22
 pre: "<b>2-2. </b>"
 ---
 
-본 실습은 BYOM (Bring Your Own Model) . Pre-trained한 mobilenet으로 이미지 분류 모델을 불러옵니다.
+본 실습은 BYOM (Bring Your Own Model) 방식을 사용하며, Pre-trained한 mobilenet으로 이미지 분류 모델을 불러옵니다.
 
 ---
 
@@ -16,10 +16,10 @@ pre: "<b>2-2. </b>"
 2. **S3 bucket 이름**을 S3를 생성할 때 사용하셨던 `sagemaker-workshop-성함`으로 변경합니다.
 ![image](/images/20_notebook/20_pre-trained/replace.png)
 
-3. Jupyter notebook에서 **Shift+Enter**로 모든 셀을 실행하고, 모델이 import 된 것을 확인합니다.
+3. Jupyter notebook에서 각 셀의 설명을 참고해주시고, **Shift+Enter**로 모든 셀을 실행합니다. 모델이 import 된 것을 확인합니다.
 ![image](/images/20_notebook/20_pre-trained/result.png)
 
-4. Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.
+4. Endpoint을 생성하는 Hosting 부분은 3-5 분 정도 소요됩니다. Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.
 ![image](/images/20_notebook/20_pre-trained/hosting.png)
 
 5. 마지막 셀의 주석처리를 제거하여 **Endpoint를 삭제**합니다.
