@@ -4,7 +4,7 @@ weight: 21
 pre: "<b>2-1. </b>"
 ---
 
-본 실습에서는 Built-in 알고리즘은 XGBoost를 이용해 은행 사기 탐지 모델을 train, tune 그리고 deploy를 합니다.
+본 실습에서는 Built-in 알고리즘인 XGBoost를 이용해 은행 사기 탐지 모델을 train, tune 그리고 deploy를 합니다.
 
 ---
 

@@ -18,7 +18,7 @@ pre: "<b>2. </b>"
 ```
 ![image](/images/20_notebook/git-clone.png)
 
-3. Home으로 돌아가면 **sagemaker-notebook-examples-kr** 폴더가 생성된 것을 볼 수 있습니다.  
+3. 현재 실행중인 Jupyter notebook 창을 닫고 **Files 탭**으로 가면, **sagemaker-notebook-examples-kr** 폴더가 생성된 것을 볼 수 있습니다.  
 ![image](/images/20_notebook/folder.png)
 
 ---
