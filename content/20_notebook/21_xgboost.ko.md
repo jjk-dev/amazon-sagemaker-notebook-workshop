@@ -18,10 +18,10 @@ pre: "<b>2-1. </b>"
 
 3. 그 후, Jupyter notebook에서 **Shift+Enter**로 모든 셀을 실행하셔서 feature engineering을 진행합니다. Notebook의 각 셀의 설명을 참고해주세요. 
 
-4. Estimator에서 **instance type**을`'ml.m5.xlarge'`로 변경합니다. Training job 을 생성하는 데에 5분 정도 소요됩니다. 
+4. Estimator에서 **instance type**을 `'ml.m5.xlarge'`로 변경합니다. Training job 을 생성하는 데에 5분 정도 소요됩니다. 
 ![image](/images/20_notebook/10_xgboost/estimator.png)
 
-5. Deploy에서 **instance type**을`'ml.m5.xlarge'`로 변경합니다. Endpoint을 생성하는 Hosting 부분은 5-10 분 정도 소요됩니다. 
+5. Deploy에서 **instance type**을 `'ml.m5.xlarge'`로 변경합니다. Endpoint을 생성하는 Hosting 부분은 5-10 분 정도 소요됩니다. 
 ![image](/images/20_notebook/10_xgboost/hosting.png)
 
 6. Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.

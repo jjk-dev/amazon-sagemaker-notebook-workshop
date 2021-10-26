@@ -19,7 +19,7 @@ pre: "<b>2-2. </b>"
 3. Jupyter notebook에서 각 셀의 설명을 참고해주시고, **Shift+Enter**로 모든 셀을 실행합니다. 모델이 import 된 것을 확인합니다.
 ![image](/images/20_notebook/20_pre-trained/result.png)
 
-4. Deploy에서 **instance type**을`'ml.c5.xlarge'`로 변경합니다. Endpoint을 생성하는 Hosting 부분은 3-5 분 정도 소요됩니다. 
+4. Deploy에서 **instance type**을 `'ml.c5.xlarge'`로 변경합니다. Endpoint을 생성하는 Hosting 부분은 3-5 분 정도 소요됩니다. 
 ![image](/images/20_notebook/20_pre-trained/deploy.png)
 
 5. Hosting이 완료되면 추론을 통해 모델의 성능을 확인합니다.
