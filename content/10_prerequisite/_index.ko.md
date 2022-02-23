@@ -12,6 +12,10 @@ pre: "<b>1. </b>"
 
 여기에서는 실습을 보다 쉽게 수행하도록 데이터셋을 가공했습니다. **다음 CSV 파일을 다운로드하면 됩니다.**
 
+{{% notice info %}}
+**EDA와 Feature engineering을 제외**하는 경우, 두번째 파일인 **banking_fraud_wo_eda.csv**를 다운로드 하세요.  
+{{% /notice %}}
+
 {{% attachments style="blue" pattern=".*(csv)" /%}}
 
 ---
