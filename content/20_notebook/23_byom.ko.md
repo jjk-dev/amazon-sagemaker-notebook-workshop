@@ -1,7 +1,7 @@
 ---
 title: BYOM 사용하기
-weight: 22
-pre: "<b>2-2. </b>"
+weight: 23
+pre: "<b>2-3. </b>"
 ---
 
 본 실습은 BYOM (Bring Your Own Model) 방식을 사용하며, Pre-trained한 mobilenet으로 이미지 분류 모델을 불러옵니다.
