@@ -20,7 +20,7 @@ git clone https://github.com/jjk-dev/sagemaker-notebook-examples-kr.git
 ```
 ![image](/images/20_notebook/git-clone.png)
 
-3. 현재 실행중인 Terminal 창을 닫고 **Files 탭**으로 가면, **sagemaker-notebook-examples-kr** 폴더가 생성된 것을 볼 수 있습니다.  해당 폴더를 클릭합니다.
+3. 현재 실행중인 Terminal 창을 닫고 **Files 탭**으로 가면, **sagemaker-notebook-examples-kr** 폴더가 생성된 것을 볼 수 있습니다.
 ![image](/images/20_notebook/folder.png)
 
 ---
