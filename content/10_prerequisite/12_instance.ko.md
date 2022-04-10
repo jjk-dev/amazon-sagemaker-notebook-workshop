@@ -1,7 +1,7 @@
 ---
 title: SageMaker Notebook Instance 생성하기
-weight: 13
-pre: "<b>1-3. </b>"
+weight: 12
+pre: "<b>1-2. </b>"
 ---
 
 AWS Management Console에서 [Amazon SageMaker](https://ap-northeast-2.console.aws.amazon.com/sagemaker/home?region=ap-northeast-2#/)를 검색합니다.
